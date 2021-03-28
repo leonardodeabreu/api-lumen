@@ -1,5 +1,0 @@
-2021/03/25 20:36:23 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
-2021/03/25 22:20:25 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
-2021/03/25 22:24:23 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
-2021/03/26 14:58:01 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
-2021/03/28 02:44:54 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
