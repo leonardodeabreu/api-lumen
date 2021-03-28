@@ -1,0 +1,408 @@
+{
+	"info": {
+		"_postman_id": "e169a6aa-a45e-4e3d-b693-5ae65a62827f",
+		"name": "Kitman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "teste@teste.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "teste@teste.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/api/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/user/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Leo novo\",\n    \"phone\": \"44998913729\",\n    \"email\": \"teste3@teste.com\",\n    \"age\": 25,\n    \"active\": 1,\n    \"password\": \"foo\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/user",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Leo Editado\",\n    \"phone\": \"44998913729\",\n    \"email\": \"teste2@teste.com\",\n    \"age\": 25,\n    \"active\": 1,\n    \"password\": \"foo\"\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/user/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/book",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/api/book/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Title new\",\n    \"isbn\": \"1231231231231\",\n    \"category\": \"Terror\",\n    \"year\": 1990\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/book",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Title new edited\",\n    \"isbn\": \"1231231231231\",\n    \"category\": \"Terror\",\n    \"year\": 1994\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/api/book/2",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/book/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SaveFavorite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 2,\n    \"book_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/book/favorite/save",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"favorite",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveFavorite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 2,\n    \"book_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/book/favorite/remove",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"book",
+								"favorite",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
